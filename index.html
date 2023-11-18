@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Devfinder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        lightMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="dark:bg-[#141D2F] bg-[#F6F8FF]">
+    <header
+      class="@container w-full max-w-3xl mx-auto my-auto px-10 py-10 flex items-center justify-center"
+    >
+      <h2
+        class="dark:text-white text-[#222731] font-sans text-2xl font-bold mr-auto"
+      >
+        devfinder
+      </h2>
+      <button
+        id="mode-toggle"
+        class="text-[#697C9] font-sans text-xs font-bold mr-4 dark:text-white"
+      >
+        Dark
+      </button>
+      <!-- <img class="w-5 h-5" src="./img/moon1111.svg" alt="" /> -->
+      <!-- <span class="fa-solid fa-sun"></span>
+      <span class="fa-solid fa-moon"></span> -->
+    </header>
+    <!-- Main------- -->
+    <section>
+      <form
+        class="@container w-full max-w-3xl mx-auto my-auto px-10 py-10 mb-8 shadow-[ 0px 16px 30px -10px rgba(70, 96, 187, 0.20)] bg-[#FEFEFE] dark:bg-[#1E2A47]"
+      >
+        <label
+          for="search"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+          >
+            <svg
+              class="w-4 h-4 text-blue-500 dark:text-blue-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <input
+            type="search"
+            id="search"
+            class="block w-full p-4 ps-10 text-sm text-gray-900 border border-white-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Search GitHub username…"
+            required
+          />
+          <button
+            type="submit"
+            class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+    </section>
+    <main
+      class="@container w-full max-w-3xl mx-auto my-auto px-10 py-10shadow-[ 0px 16px 30px -10px rgba(70, 96, 187, 0.20)] bg-[#FEFEFE] dark:bg-[#1E2A47]"
+    >
+      <section class="pt-4">
+        <div class="mb-8">
+          <div class="wrapper flex justify-between">
+            <div class="img">
+              <img class="rounded-full" src="./img/Bitmap.jpg" alt="" />
+            </div>
+            <div>
+              <ul class="flex-col">
+                <li>
+                  <h1
+                    class="text-[#2B3442] font-sans text-2xl font-bold mb-1 dark:text-white"
+                  >
+                    The Octocat
+                  </h1>
+                </li>
+                <li>
+                  <p
+                    class="text-[#0079FF;] font-sans text-xs font-normal mb-5 dark:text-white"
+                  >
+                    @octocat
+                  </p>
+                </li>
+                <li>
+                  <p
+                    class="text-[#4B6A9B; ] font-sans text-xs font-normal opacity-75 dark:text-white"
+                  >
+                    This profile has no bio
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p
+                class="text-[#4B6A9B; ] font-sans text-xs font-normal opacity-75 dark:text-white"
+              >
+                Joined 25 Jan 2011
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="@container w-full max-w-3xl mx-auto my-auto px-10 py-10">
+        <div>
+          <div class="rounded-xl w-96 h-20 ml-72 mt-[-80px]">
+            <div class="flex items-center justify-around pt-4">
+              <p
+                class="text-[#4B6A9B; ] font-sans text-xs font-normal opacity-75 dark:text-white"
+              >
+                Repos
+              </p>
+              <p
+                class="text-[#4B6A9B; ] font-sans text-xs font-normal opacity-75 dark:text-white"
+              >
+                Followers
+              </p>
+              <p
+                class="text-[#4B6A9B; ] font-sans text-xs font-normal opacity-75 dark:text-white"
+              >
+                Following
+              </p>
+            </div>
+            <div
+              class="dark:text-white flex items-center justify-around text-center"
+            >
+              <p
+                class="dark:text-white text-[#2B3442] font-sans text-2xl font-bold"
+              >
+                8
+              </p>
+              <p
+                class="dark:text-white text-[#2B3442] font-sans text-2xl font-bold"
+              >
+                3938
+              </p>
+              <p
+                class="dark:text-white text-[#2B3442] font-sans text-2xl font-bold"
+              >
+                9
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="@container w-full max-w-3xl mx-auto my-auto px-10 py-10 mt-[-47px]"
+      >
+        <div class="flex ml-40 mb-4">
+          <div class="flex m-auto">
+            <img class="mr-2" src="./img/003-pin.svg" alt="" />
+            <p class="text-[#4B6A9B;] dark:text-white">San Francisco</p>
+          </div>
+          <div class="flex">
+            <img class="mr-3" src="./img/004-twitter.svg" alt="" />
+            <p class="dark:text-white text-[#4B6A9B;]">Not Available</p>
+          </div>
+        </div>
+        <div class="flex ml-40">
+          <div class="flex m-auto">
+            <img class="mr-2" src="./img/002-url.svg" alt="" />
+            <p class="text-[#4B6A9B;] dark:text-white">https://github.blog</p>
+          </div>
+          <div class="flex">
+            <img class="mr-8" src="./img/001-office-building.svg" alt="" />
+            <p class="text-[#4B6A9B;] dark:text-white">@github</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
